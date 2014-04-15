@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtOnTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_one_txt"
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:textSize="24dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnFirstFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtOnTop"
+        android:text="@string/first_fragment"/>
+    <Button
+        android:id="@+id/btnSecondFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnFirstFragment"
+        android:text="@string/second_fragment"/>
+    <Button
+        android:id="@+id/btnThirdFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSecondFragment"
+        android:text="@string/third_fragment"/>
+
+</RelativeLayout>
