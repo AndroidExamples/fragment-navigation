@@ -15,9 +15,24 @@
         android:orderInCategory="200"
         app:showAsAction="ifRoom" />
 
-    <!-- a last option that always appears -->
+    <!-- one more option that always appears -->
     <item android:id="@+id/action_three"
         android:title="@string/action_three"
         android:orderInCategory="300"
         app:showAsAction="always" />
+
+    <!-- an option to show with both icon and text -->
+    <item android:id="@+id/action_four"
+        android:icon="@android:drawable/ic_menu_directions"
+        android:title="@string/action_four"
+        android:orderInCategory="400"
+        app:showAsAction="withText|always" />
+
+    <!-- an option to always show as an icon only -->
+    <item android:id="@+id/action_five"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/action_five"
+        android:orderInCategory="500"
+        app:showAsAction="always" />
+
 </menu>

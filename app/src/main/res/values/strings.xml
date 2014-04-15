@@ -8,8 +8,11 @@
     <string name="third_fragment">third fragment</string>
     <string name="fragment_one_txt">You\'re now on fragment 1</string>
     <string name="first_fragment">first fragment</string>
+
     <string name="action_one">action one</string>
     <string name="action_two">action two</string>
     <string name="action_three">action three</string>
+    <string name="action_four">action four</string>
+    <string name="action_five">action five</string>
 
 </resources>
