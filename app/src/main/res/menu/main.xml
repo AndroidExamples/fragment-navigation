@@ -1,10 +1,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="be.hcpl.android.example.fragment.navigation.myapplication2.app.MainActivity" >
-    
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+    tools:context="be.hcpl.android.fragment.navigation.MainActivity" >
+
+    <!-- an option that never appears as a fixed text/icon in the actionbar -->
+    <item android:id="@+id/action_one"
+        android:title="@string/action_one"
         android:orderInCategory="100"
         app:showAsAction="never" />
+
+    <!-- another option that only appears if there is enough room -->
+    <item android:id="@+id/action_two"
+        android:title="@string/action_two"
+        android:orderInCategory="200"
+        app:showAsAction="ifRoom" />
+
+    <!-- a last option that always appears -->
+    <item android:id="@+id/action_three"
+        android:title="@string/action_three"
+        android:orderInCategory="300"
+        app:showAsAction="always" />
 </menu>
