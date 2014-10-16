@@ -21,9 +21,8 @@ Since the project files are still checked in (not a good practice!) you should b
 
 Each version was tagged on the git project.
 
-### v0.2.0
+### v0.1.1
 
-* buildconfig example
 * added about fragment with open source library listing
 * upgraded to min api level 11
 * gradle update
