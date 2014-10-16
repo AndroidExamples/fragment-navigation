@@ -23,6 +23,7 @@ Each version was tagged on the git project.
 
 ### v0.1.1
 
+* buildconfig example
 * added about fragment with open source library listing
 * upgraded to min api level 11
 * gradle update

@@ -16,9 +16,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+
+    defaultConfig {
+        // add any values you want to the build config here
+        buildConfigField "String", "KEY", "\"VALUE\""
+    }
 }
 
 dependencies {
+    compile 'com.tundem.aboutlibraries:library:3.0.1@aar'
     compile 'com.android.support:appcompat-v7:19.1.0'
     compile 'com.android.support:support-v4:19.1.0'
     compile fileTree(dir: 'libs', include: ['*.jar'])
