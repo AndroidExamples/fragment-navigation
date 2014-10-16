@@ -106,6 +106,7 @@ public class NavigationDrawerFragment extends Fragment {
                         FirstFragment.createInstance(),
                         SecondFragment.createInstance(),
                         ThirdFragment.createInstance(),
+                        AboutFragment.createInstance()
                 }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;

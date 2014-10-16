@@ -19,5 +19,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="empty_menu_item">##TODO##</string>
+    <string name="show_libraries">show libraries</string>
 
 </resources>
