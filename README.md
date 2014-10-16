@@ -21,7 +21,7 @@ Since the project files are still checked in (not a good practice!) you should b
 
 Each version was tagged on the git project.
 
-### v0.1.1
+### v0.2.0
 
 * buildconfig example
 * added about fragment with open source library listing
