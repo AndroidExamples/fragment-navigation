@@ -16,7 +16,7 @@ import be.hcpl.android.fragment.navigation.fragments.FirstFragment;
  * fragment handling. If you need more than one activity create an (abstract) base activity with
  * the fragment handling logic.
  */
-public class MainActivity extends ActionBarActivity {
+public class OldMainActivity extends ActionBarActivity {
 
     /**
      * a key to retrieve the last stored fragment from bundle

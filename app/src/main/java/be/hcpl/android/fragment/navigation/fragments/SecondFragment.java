@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import be.hcpl.android.fragment.navigation.MainActivity;
+import be.hcpl.android.fragment.navigation.OldMainActivity;
 import be.hcpl.android.fragment.navigation.R;
 
 /**
@@ -32,14 +32,14 @@ public class SecondFragment extends Fragment {
         view.findViewById(R.id.btnFirstFragment).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity)getActivity()).switchFragment(FirstFragment.class);
+                ((OldMainActivity)getActivity()).switchFragment(FirstFragment.class);
             }
         });
         view.findViewById(R.id.btnSecondFragment).setEnabled(false);
         view.findViewById(R.id.btnThirdFragment).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity)getActivity()).switchFragment(ThirdFragment.class);
+                ((OldMainActivity)getActivity()).switchFragment(ThirdFragment.class);
             }
         });
     }

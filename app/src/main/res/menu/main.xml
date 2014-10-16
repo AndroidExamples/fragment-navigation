@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="be.hcpl.android.fragment.navigation.MainActivity" >
+    tools:context="be.hcpl.android.fragment.navigation.OldMainActivity" >
 
     <!-- an option that never appears as a fixed text/icon in the actionbar -->
     <item android:id="@+id/action_one"

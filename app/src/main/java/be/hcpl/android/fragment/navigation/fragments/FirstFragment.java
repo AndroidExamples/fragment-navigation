@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import be.hcpl.android.fragment.navigation.MainActivity;
+import be.hcpl.android.fragment.navigation.OldMainActivity;
 import be.hcpl.android.fragment.navigation.R;
 
 /**
@@ -33,13 +33,13 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.btnSecondFragment).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity)getActivity()).switchFragment(SecondFragment.class);
+                ((OldMainActivity)getActivity()).switchFragment(SecondFragment.class);
             }
         });
         view.findViewById(R.id.btnThirdFragment).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity)getActivity()).switchFragment(ThirdFragment.class);
+                ((OldMainActivity)getActivity()).switchFragment(ThirdFragment.class);
             }
         });
     }
