@@ -1,19 +1,23 @@
 package be.hcpl.android.fragment.navigation.fragments;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import be.hcpl.android.fragment.navigation.OldMainActivity;
+import be.hcpl.android.fragment.navigation.MainActivity;
 import be.hcpl.android.fragment.navigation.R;
 
 /**
  * An example fragment that can be loaded in place
  */
-public class ThirdFragment extends Fragment {
+public class ThirdFragment extends TemplateFragment {
+
+    public static ThirdFragment createInstance() {
+        return new ThirdFragment();
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -27,18 +31,18 @@ public class ThirdFragment extends Fragment {
 
         // and here our view is loaded
 
-        ((TextView)view.findViewById(R.id.txtOnTop)).setText(new StringBuilder("You're now on ").append(this.getClass().getSimpleName()).toString());
+        ((TextView) view.findViewById(R.id.txtOnTop)).setText(new StringBuilder("You're now on ").append(this.getClass().getSimpleName()).toString());
 
         view.findViewById(R.id.btnFirstFragment).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((OldMainActivity) getActivity()).switchFragment(FirstFragment.class);
+                ((MainActivity) getActivity()).switchContent(FirstFragment.createInstance());
             }
         });
         view.findViewById(R.id.btnSecondFragment).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((OldMainActivity)getActivity()).switchFragment(SecondFragment.class);
+                ((MainActivity) getActivity()).switchContent(SecondFragment.createInstance());
             }
         });
         view.findViewById(R.id.btnThirdFragment).setEnabled(false);
