@@ -1,6 +1,7 @@
 package be.hcpl.android.fragment.navigation.fragments;
 
-import android.app.Fragment;
+
+import androidx.fragment.app.Fragment;
 
 import be.hcpl.android.fragment.navigation.R;
 

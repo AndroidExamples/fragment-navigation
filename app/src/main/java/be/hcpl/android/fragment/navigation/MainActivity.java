@@ -1,19 +1,28 @@
 package be.hcpl.android.fragment.navigation;
 
-import android.app.ActionBar;
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
+
+
+
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.appcompat.app.ActionBar;
+
 import android.os.Bundle;
-import android.support.v4.widget.DrawerLayout;
+
+
 import android.view.Menu;
 import android.view.MenuItem;
+
+import androidx.drawerlayout.widget.DrawerLayout;
+
 
 import be.hcpl.android.fragment.navigation.fragments.AboutFragment;
 import be.hcpl.android.fragment.navigation.fragments.NavigationDrawerFragment;
 
 
-public class MainActivity extends Activity
+public class MainActivity extends AppCompatActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
@@ -37,7 +46,7 @@ public class MainActivity extends Activity
         setContentView(R.layout.activity_main);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
-                getFragmentManager().findFragmentById(R.id.navigation_drawer);
+                getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
 
         // Set up the drawer.
         mNavigationDrawerFragment.setUp(
@@ -49,13 +58,13 @@ public class MainActivity extends Activity
         // Always call the superclass so it can restore the view hierarchy
         super.onRestoreInstanceState(savedInstanceState);
         // Restore state members from saved instance
-        mContentFragment = getFragmentManager().getFragment(savedInstanceState, KEY_LAST_FRAGMENT);
+        mContentFragment = getSupportFragmentManager().getFragment(savedInstanceState, KEY_LAST_FRAGMENT);
     }
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
-        if (mContentFragment != null && mContentFragment.isAdded() && getFragmentManager() != null) {
-            getFragmentManager().putFragment(savedInstanceState,
+        if (mContentFragment != null && mContentFragment.isAdded() && getSupportFragmentManager() != null) {
+            getSupportFragmentManager().putFragment(savedInstanceState,
                     KEY_LAST_FRAGMENT, mContentFragment);
         }
         // Always call the superclass so it can save the view hierarchy state
@@ -70,14 +79,14 @@ public class MainActivity extends Activity
             mContentFragment = AboutFragment.createInstance();
         }
         // no backstack here
-        getFragmentManager().beginTransaction()
+        getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container, mContentFragment)
                 .commit();
     }
 
     @Override
     public void onNavigationDrawerItemSelected(Fragment fragment) {
-        FragmentManager fragmentManager = getFragmentManager();
+        FragmentManager fragmentManager = getSupportFragmentManager();
         // use default here
         if (fragment != null) {
             // update the main content by replacing fragments
@@ -91,7 +100,7 @@ public class MainActivity extends Activity
      * @param fragment
      */
     public void switchContent(Fragment fragment) {
-        getFragmentManager().beginTransaction()
+        getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container, fragment)
                         // add to backstack
                 .addToBackStack(fragment.getClass().getSimpleName())
@@ -100,7 +109,7 @@ public class MainActivity extends Activity
     }
 
     public void restoreActionBar() {
-        ActionBar actionBar = getActionBar();
+        ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setDisplayShowTitleEnabled(true);
     }

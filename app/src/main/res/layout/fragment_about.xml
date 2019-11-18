@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/border"
         android:padding="10dp"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:gravity="center"/>
 
     <Button
