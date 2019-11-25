@@ -15,11 +15,21 @@ Since the project files are still checked in (not a good practice!) you should b
 * add split b actionbar 
 * more info on fragment backstack handling
 * implement proper up vs back navigation
+* replace remaining deprecated methods
 * ...
 
 ## Version History
 
 Each version was tagged on the git project.
+
+
+### v0.3.0
+
+* upgraded to androidx branches
+* upgraded to min api level 17, compiler to api 29
+* upgraded gradle
+* upgraded aboutlibraries to new source
+* gradle update
 
 ### v0.2.0
 

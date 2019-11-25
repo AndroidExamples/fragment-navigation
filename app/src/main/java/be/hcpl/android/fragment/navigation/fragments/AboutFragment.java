@@ -1,5 +1,6 @@
 package be.hcpl.android.fragment.navigation.fragments;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
@@ -10,8 +11,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.tundem.aboutlibraries.Libs;
-import com.tundem.aboutlibraries.ui.LibsActivity;
+import com.mikepenz.aboutlibraries.Libs;
+import com.mikepenz.aboutlibraries.LibsBuilder;
+import com.mikepenz.aboutlibraries.ui.LibsActivity;
 
 import be.hcpl.android.fragment.navigation.BuildConfig;
 import be.hcpl.android.fragment.navigation.R;
@@ -70,7 +72,9 @@ public class AboutFragment extends TemplateFragment {
                 ((MainActivity) getActivity()).switchContent(fragment);
                 */
 
+                /*
                 //Create an intent with context and the Activity class
+
                 Intent i = new Intent(getActivity(), LibsActivity.class);
                 //Pass the fields of your application to the lib so it can find all external lib information
                 i.putExtra(Libs.BUNDLE_FIELDS, Libs.toStringArray(R.string.class.getFields()));
@@ -95,7 +99,16 @@ public class AboutFragment extends TemplateFragment {
 
                 //start the activity
                 startActivity(i);
+
+                 */
+
+                new LibsBuilder().withAutoDetect(true).withActivityStyle(Libs.ActivityStyle.LIGHT_DARK_TOOLBAR).start(getContext());
+
+
+
             }
         });
+
+
     }
 }
